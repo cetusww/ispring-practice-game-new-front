@@ -1,0 +1,38 @@
+{
+  "frames": {
+    "hero_shoot1.png": {
+      "frame": {"x":0, "y":0, "w":587, "h":707},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":587, "h":707},
+      "sourceSize": {"w":587, "h":707}
+    },
+    "hero_shoot2.png": {
+      "frame": {"x":587, "y":0, "w":587, "h":707},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":587, "h":707},
+      "sourceSize": {"w":587, "h":707}
+    },
+    "hero_shoot3.png": {
+      "frame": {"x":1174, "y":0, "w":587, "h":707},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":587, "h":707},
+      "sourceSize": {"w":587, "h":707}
+    },
+    "hero_shoot4.png": {
+      "frame": {"x":1761, "y":0, "w":587, "h":707},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":587, "h":707},
+      "sourceSize": {"w":587, "h":707}
+    }
+  },
+  "meta": {
+    "image": "hero_shoot_group.png",
+    "format": "RGBA8888",
+    "size": {"w":2348, "h":707},
+    "scale": "1"
+  }
+}

@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    position: relative;
+    height: 100%;
+    background: url('../images/Background/menu_background.jpeg') no-repeat;
+    background-size: cover;
+}
+
+.table {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px;
+}
+
+.table__multi {
+    width: 35vw;
+    height: 85vh;
+    background-color: rgba(61, 61, 61, 0.6);
+    padding: 20px;
+}
+
+.table__ratio {
+    float: right;
+}
+
+.table__single {
+    width: 55vw;
+    height: 85vh;
+    background-color: rgba(61, 61, 61, 0.6);
+    padding: 20px;
+}
+
+.table__levels {
+    display: flex;
+    justify-content: space-around;
+    height: 90%;
+}
+
+.table__first-level,
+.table__second-level,
+.table__third-level {
+    width: 30%;
+    background-color: rgba(61, 61, 61, 0.8);
+    color: rgba(255, 255, 255, 1);
+    font: 800 16px/20px 'Russo One', sans-serif;
+    padding: 10px;
+    text-align: center;
+    overflow: auto;
+}
+
+h2 {
+    font: 800 30px/34px "Russo One", sans-serif;
+    color: rgba(255, 255, 255, 1);
+    margin: 0 0 20px 0;
+}
+
+h3 {
+    display: block;
+    font: 800 16px/20px "Russo One", sans-serif;
+    margin: 0 0 10px 0;
+}
+
+.table__list {
+    text-align: left;
+    margin: 0 0 0 25px;
+    font: 800 16px/20px "Russo One", sans-serif;
+    color: rgba(255, 255, 255, 1);
+}
+
+.table__multi-list {
+    overflow: auto;
+}
+
+.previous-page {
+    position: absolute;
+    width: 125px;
+    height: 50px;
+    color: rgba(255, 255, 255, 1);
+    font: 400 16px/20px "Russo One", sans-serif;
+    background-color: rgba(103, 80, 164, 1);
+    border-radius: 25px;
+    left: 20px;
+    bottom: 20px;
+}

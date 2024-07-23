@@ -1,0 +1,4 @@
+
+class PositionComponent extends Component {
+
+}

@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    height: 100%;
+    background: url('../images/Background/menu_background.jpeg') no-repeat;
+    background-size: cover;
+}
+
+canvas {
+    display: none;
+}
+
+.main {
+    width: 90vw;
+    height: 85vh;
+    margin: 30px auto;
+    background-color: rgba(61, 61, 61, 0.6);
+    text-align: center;
+    padding: 30px;
+}
+
+.players-preview {
+    display: flex;
+    justify-content: space-around;
+}
+
+img {
+    width: 30%;
+}
+
+.players-preview__opponent {
+    display: none;
+    transform: scaleX(-1);
+}
+
+.countdown {
+    display: none;
+    font: 400 50px/54px "Russo One", sans-serif;
+    color: rgba(255, 255, 255, 1);
+    margin: 30px 0 0 0;
+
+}
+
+.awaiting-text {
+    margin: 10px 0 10px 0;
+    font: 400 50px/54px "Russo One", sans-serif;
+    color: rgba(255, 255, 255, 1);
+}
+
+
+.loader {
+    margin: 0 auto;
+    border: 8px solid rgba(255, 255, 255, 1);
+    border-top: 8px solid rgba(103, 80, 164, 1);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.previous-page {
+    position: absolute;
+    width: 125px;
+    height: 50px;
+    color: rgba(255, 255, 255, 1);
+    font: 400 16px/20px "Russo One", sans-serif;
+    background-color: rgba(103, 80, 164, 1);
+    border-radius: 25px;
+    left: 20px;
+    bottom: 20px;
+}

@@ -1,0 +1,80 @@
+{
+  "frames": {
+    "hero_idle1.png": {
+      "frame": {"x":0, "y":0, "w":587, "h":707},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":587, "h":707},
+      "sourceSize": {"w":587, "h":707}
+    },
+    "hero_idle2.png": {
+      "frame": {"x":587, "y":0, "w":587, "h":707},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":587, "h":707},
+      "sourceSize": {"w":587, "h":707}
+    },
+    "hero_idle3.png": {
+      "frame": {"x":1174, "y":0, "w":587, "h":707},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":587, "h":707},
+      "sourceSize": {"w":587, "h":707}
+    },
+    "hero_idle4.png": {
+      "frame": {"x":1761, "y":0, "w":587, "h":707},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":587, "h":707},
+      "sourceSize": {"w":587, "h":707}
+    },
+    "hero_idle5.png": {
+      "frame": {"x":2348, "y":0, "w":587, "h":707},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":587, "h":707},
+      "sourceSize": {"w":587, "h":707}
+    },
+    "hero_idle6.png": {
+      "frame": {"x":2935, "y":0, "w":587, "h":707},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":587, "h":707},
+      "sourceSize": {"w":587, "h":707}
+    },
+    "hero_idle7.png": {
+      "frame": {"x":3522, "y":0, "w":587, "h":707},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":587, "h":707},
+      "sourceSize": {"w":587, "h":707}
+    },
+    "hero_idle8.png": {
+      "frame": {"x":4109, "y":0, "w":587, "h":707},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":587, "h":707},
+      "sourceSize": {"w":587, "h":707}
+    },
+    "hero_idle9.png": {
+      "frame": {"x":4696, "y":0, "w":587, "h":707},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":587, "h":707},
+      "sourceSize": {"w":587, "h":707}
+    },
+    "hero_idle10.png": {
+      "frame": {"x":5283, "y":0, "w":587, "h":707},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":587, "h":707},
+      "sourceSize": {"w":587, "h":707}
+    }
+  },
+  "meta": {
+    "image": "hero_idle_group.png",
+    "format": "RGBA8888",
+    "size": {"w":5870, "h":707},
+    "scale": "1"
+  }
+}

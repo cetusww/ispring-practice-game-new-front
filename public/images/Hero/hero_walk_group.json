@@ -1,0 +1,66 @@
+{
+  "frames": {
+    "hero_walk1.png": {
+      "frame": {"x":0, "y":0, "w":587, "h":707},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":587, "h":707},
+      "sourceSize": {"w":587, "h":707}
+    },
+    "hero_walk2.png": {
+      "frame": {"x":587, "y":0, "w":587, "h":707},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":587, "h":707},
+      "sourceSize": {"w":587, "h":707}
+    },
+    "hero_walk3.png": {
+      "frame": {"x":1174, "y":0, "w":587, "h":707},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":587, "h":707},
+      "sourceSize": {"w":587, "h":707}
+    },
+    "hero_walk4.png": {
+      "frame": {"x":1761, "y":0, "w":587, "h":707},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":587, "h":707},
+      "sourceSize": {"w":587, "h":707}
+    },
+    "hero_walk5.png": {
+      "frame": {"x":2348, "y":0, "w":587, "h":707},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":587, "h":707},
+      "sourceSize": {"w":587, "h":707}
+    },
+    "hero_walk6.png": {
+      "frame": {"x":2935, "y":0, "w":587, "h":707},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":587, "h":707},
+      "sourceSize": {"w":587, "h":707}
+    },
+    "hero_walk7.png": {
+      "frame": {"x":3522, "y":0, "w":587, "h":707},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":587, "h":707},
+      "sourceSize": {"w":587, "h":707}
+    },
+    "hero_walk8.png": {
+      "frame": {"x":4109, "y":0, "w":587, "h":707},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":587, "h":707},
+      "sourceSize": {"w":587, "h":707}
+    }
+  },
+  "meta": {
+    "image": "hero_walk_group.png",
+    "format": "RGBA8888",
+    "size": {"w":4696, "h":707},
+    "scale": "1"
+  }
+}

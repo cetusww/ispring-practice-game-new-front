@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rating</title>
+    <link href="https://fonts.googleapis.com/css2?family=Miltonian+Tattoo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/beercss@3.5.8/dist/cdn/beer.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/rating_style.css">
+</head>
+<body>
+<div class="table">
+    <div class="table__multi">
+        <h2>Многопользовательский режим</h2>
+        <div class="table__multi-list">
+            <ol class="table__list">
+                {% set userInTable = false %}
+                {% for user in usersMultiplayer %}
+                    {% if user.multiplayerAll != 0 %}
+                        {% set userInTable = true %}
+                        <li>{{ user.username }}: <span class="table__ratio">{{ (user.multiplayerWin / user.multiplayerAll) | number_format(2, '.', '') }}</span> </li>
+                    {% endif %}
+                {% endfor %}
+            </ol>
+            {% if not userInTable %}
+                <span class="table__placeholder">Рейтинга пока нет((</span>
+            {% endif %}
+        </div>
+    </div>
+    <div class="table__single">
+        <h2>Однопользовательский режим</h2>
+        <div class="table__levels">
+            <div class="table__first-level">
+                <h3>1 уровень</h3>
+                <ol class="table__list">
+                    {% set userInTable = false %}
+                    {% for user in usersFirstLevel %}
+                        {% if user.scoreFirstLevel != 0 %}
+                            {% set userInTable = true %}
+                            <li> {{ user.username }}: <span class="table__score"> {{ user.scoreFirstLevel }} </span></li>
+                        {% endif %}
+                    {% endfor %}
+                </ol>
+                {% if not userInTable %}
+                    <span class="table__placeholder">Рейтинга пока нет((</span>
+                {% endif %}
+            </div>
+            <div class="table__second-level">
+                <h3>2 уровень</h3>
+                <ol class="table__list">
+                    {% set userInTable = false %}
+                    {% for user in usersSecondLevel %}
+                        {% if user.scoreSecondLevel != 0 %}
+                            {% set userInTable = true %}
+                            <li> {{ user.username }}: <span class="table__score"> {{ user.scoreSecondLevel }} </span></li>
+                        {% endif %}
+                    {% endfor %}
+                </ol>
+                {% if not userInTable %}
+                    <span>Рейтинга пока нет((</span>
+                {% endif %}
+            </div>
+            <div class="table__third-level">
+                <h3>3 уровень</h3>
+                <ol class="table__list">
+                    {% set userInTable = false %}
+                    {% for user in usersThirdLevel %}
+                        {% if user.scoreThirdLevel != 0 %}
+                            {% set userInTable = true %}
+                            <li> {{ user.username }}: <span class="table__score"> {{ user.scoreThirdLevel }} </span></li>
+                        {% endif %}
+                    {% endfor %}
+                </ol>
+                {% if not userInTable %}
+                    <span>Рейтинга пока нет((</span>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+<a class="previous-page" href="/menu">Вернуться</a>
+</body>
+</html>

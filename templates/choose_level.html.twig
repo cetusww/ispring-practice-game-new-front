@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Choose Level</title>
+  <link href="https://fonts.googleapis.com/css2?family=Miltonian+Tattoo&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/beercss@3.5.8/dist/cdn/beer.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/choose_level_style.css">
+</head>
+<body>
+<h1 class="center-align title">Выбор уровня</h1>
+<div class="levels-list">
+  <a class="level-list__first" href="/first-level">
+    <p class="level-list__first-level-title">1 уровень</p>
+  </a>
+  {% if level >= 2 %}
+    <a class="level-list__second" href="/second-level">
+      <p class="level-list__second-level-title">2 уровень</p>
+    </a>
+  {% else %}
+    <div class="level-list__second">
+      <p class="level-list__second-level-title">2 уровень</p>
+      <p class="unavailable">НЕДОСТУПНО</p>
+    </div>
+  {% endif %}
+  {% if level >= 3 %}
+    <a class="level-list__third" href="/third-level">
+      <p class="level-list__third-level-title">3 уровень</p>
+    </a>
+  {% else %}
+    <div class="level-list__third">
+      <p class="level-list__third-level-title">3 уровень</p>
+      <p class="unavailable">НЕДОСТУПНО</p>
+    </div>
+  {% endif %}
+</div>
+<a class="previous-page" href="/menu">Вернуться</a>
+</body>
+</html>

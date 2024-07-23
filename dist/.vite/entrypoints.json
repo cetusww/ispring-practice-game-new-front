@@ -1,0 +1,24 @@
+{
+  "base": "/build/",
+  "entryPoints": {
+    "app": {
+      "js": [
+        "http://127.0.0.1:3000/build/assets/app.js"
+      ]
+    },
+    "theme": {
+      "css": [
+        "http://127.0.0.1:3000/build/assets/app.css"
+      ]
+    }
+  },
+  "legacy": false,
+  "metadatas": {},
+  "version": [
+    "6.4.7",
+    6,
+    4,
+    7
+  ],
+  "viteServer": "http://127.0.0.1:3000"
+}

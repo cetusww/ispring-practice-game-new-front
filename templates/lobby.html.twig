@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lobby</title>
+  <link href="https://fonts.googleapis.com/css2?family=Miltonian+Tattoo&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/beercss@3.5.8/dist/cdn/beer.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/lobby_style.css">
+  <input type="hidden" id="username" value="{{ username }}">
+
+  <script src="script/pixi.js"></script>
+  <script src="script/Bullet.js"></script>
+  <script src="script/Experience.js"></script>
+  <script src="script/Fireball.js"></script>
+  <script src="script/Stalactite.js"></script>
+  <script src="script/Hero.js"></script>
+  <script src="script/Fire.js"></script>
+  <script src="script/HeroView.js"></script>
+  <script src="script/Enemy.js"></script>
+  <script src="script/Devil.js"></script>
+  <script src="script/Bat.js"></script>
+  <script src="script/Poison.js"></script>
+  <script src="script/Ground.js"></script>
+  <script src="script/WoodenPlank.js"></script>
+  <script src="script/Shield.js"></script>
+  <script src="script/Health.js"></script>
+  <script src="script/Portal.js"></script>
+  <script src="script/multiplayerLevel.js"></script>
+  <script src="script/Wall.js"></script>
+
+</head>
+<body>
+<div class="main" id="main">
+  <div class="players-preview">
+    <img class="players-preview__player" id="player" src="images/Hero/hero.png">
+    <img class="players-preview__opponent" id="opponent"src="images/Hero/hero.png">
+  </div>
+  <div class="countdown" id="countdown"></div>
+  <div id="preloader">
+    <p class="awaiting-text">Ожидание игрока...</p>
+    <div class="loader"></div>
+  </div>
+  <a class="previous-page" href="/menu">Вернуться</a>
+</div>
+
+
+<script src="script/multiplayerIndex.js"></script>
+<script>
+    //var w = new Worker("script/multiplayerIndex.js");
+    const countdown = document.getElementById('countdown');
+    const allCanvas = document.getElementsByTagName('canvas');
+    const lobby = document.getElementById('main');
+    const opponentPreview = document.getElementById('opponent');
+    const preloader = document.getElementById('preloader');
+    let username = document.getElementById('username').value;
+    let opponentname = 'bot';
+    const ws = new WebSocket('ws://localhost:8080');
+    let isConnected = false;
+    const messageQueue = [];
+
+    ws.onopen = function() {
+        isConnected = true;
+        console.log('WebSocket connection established');
+        while (messageQueue.length > 0) {
+            ws.send(messageQueue.shift());
+        }
+        setTimeout(() => {ws.send(JSON.stringify({'username': username}))}, 1000)
+    };
+
+    ws.onerror = function(error) {
+        console.error('WebSocket Error: ' + error);
+    };
+
+  ws.onclose = function() {
+      isConnected = false;
+      console.log('WebSocket connection closed');
+      sendMessage('close');
+      window.location.href = "/menu";
+  };
+
+  ws.onmessage = function(event) {
+    const data = JSON.parse(event.data);
+    if (data === 'kick')
+    {
+        window.location.href = "/menu";
+    }
+    if (data == 'lose')
+    {
+        window.location.href = "/lose-multiplayer";
+    }
+    if ('state' in data)
+    {
+        if (data['state']['state'] === 'stop')
+        {
+            opponentPreview.style.display = 'none';
+            preloader.style.display = 'block';
+            countdown.style.display = 'none';
+            hero.restart();
+            if (state['state'] === 'start' || state['state'] === 'win')
+            {
+                saveScore();
+                window.location.href = "/win-multiplayer";
+            }  
+        }
+        state = data['state'];
+    }
+    if ('heropos' in data)
+    {
+        hero.sprite.x = HEROPOS[0];
+        hero.sprite.y = HEROPOS[1];
+        console.log('+')
+    }
+    if ('opponentname' in data)
+    {
+        opponentname = data['opponentname'];
+    }
+    if ('opponentupdate' in data)
+    {
+        let playerdata = data['opponentupdate'];
+        heroView.updateMove(playerdata['x'], playerdata['y']);
+        heroView.updateAnim(playerdata['animatetype']);
+        heroView.sprite.scale.x = playerdata['scalex'];
+        heroView.hp = playerdata['hp'];
+        hero.takeDamage(playerdata['damage']);
+        //removeBonusId.push(arrayOfBonus[i]);
+        
+        playerdata['removebonus'].forEach(id => {
+            for (let i = 0; i < arrayOfBonus.length; i++) {
+                if (arrayOfBonus[i].id == id) {
+                    arrayOfBonus[i].sprite.destroy();
+                    arrayOfBonus.splice(i, 1);
+                    break
+                }
+            }
+        });
+        for (let i = 0; i < opponentBullets.length; i++)
+        {
+            opponentBullets[0].sprite.destroy();
+            opponentBullets.splice(0, 1);
+        }
+
+        playerdata['opponentbullets'].forEach( bullet =>
+        {
+            let b = new Bullet(bullet['x'], bullet['y'], 0, 0, bullet['angle']);
+            b.view();
+            opponentBullets.push(b);
+        });
+
+        heroView.activateShield = false;
+        if (playerdata['shield'] === 'true')
+        {
+            heroView.activateShield = true;
+        } 
+    }
+  };
+
+  function sendMessage(msg)
+  {
+      const message = JSON.stringify({ msg });
+      if (isConnected) {
+          ws.send(message);
+      } else {
+          console.log('WebSocket is not connected yet, queueing message');
+          window.location.href = "/menu";
+          messageQueue.push(message);
+      }
+  }
+  //let timerId = setInterval(() => {sendMessage('PING')}, 5000);
+  function transmitData()
+  {
+    bulletsdata = [];
+    bullets.forEach(bullet => {
+        bulletsdata.push({'x': bullet.sprite.x, 'y':bullet.sprite.y, 'angle': bullet.angle})
+    });
+    let lose = false;
+    if (heroView.hp <= 0)
+    {
+        lose = true;
+        state['state'] = 'win';
+    }
+    data =
+    {
+        x: hero.sprite.x,
+        y: hero.sprite.y,
+        hp: hero.hp,
+        animatetype: hero.animateType,
+        scalex: hero.sprite.scale.x,
+        herobullets: bulletsdata,
+        removebonus: removeBonusId,
+        damage: opponentDamage, 
+        opponentlose: lose,
+        shield: String(hero.activateShield),
+    }
+    removeBonusId = [];
+    ws.send(JSON.stringify({'playerdata': data}))
+    opponentDamage = 0;
+  }
+
+
+
+  setInterval(() =>
+  {
+   
+    if (state['state'] === 'start')
+    {
+        for (let canvas of allCanvas)
+        {
+            canvas.style.display = 'block';
+        }
+        lobby.style.display = 'none';
+        transmitData();
+    }
+    if (state['state'] === 'ready' && heroView.name === 'bot')
+    {
+        heroView.name = opponentname;
+    }
+    if (state['state'] === 'ready')
+    {
+        opponentPreview.style.display = 'block';
+		preloader.style.display = 'none';
+        countdown.style.display = 'block';
+        countdown.innerHTML = `Бой через ${Math.ceil((state['time'] - Date.now() + 5000) / 1000)} секунд`;
+    }
+    if (state['state'] === 'ready' && +state['time'] + 5000 <= Date.now())
+    {
+        state['state'] = 'start';
+        hero.addShield(5);
+        heroView.addShield(5);
+    }
+  }, 15);
+</script>
+</body>
+</html>

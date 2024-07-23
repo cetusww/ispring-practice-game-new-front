@@ -1,0 +1,21 @@
+{
+    "type": "module",
+    "private": true,
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.7.0",
+        "cssnano": "^7.0.4",
+        "eslint": "^9.7.0",
+        "globals": "^15.8.0",
+        "vite": "^5.3.4",
+        "vite-plugin-copy": "^0.1.6",
+        "vite-plugin-eslint": "^1.8.1",
+        "vite-plugin-symfony": "^6.4"
+    },
+    "dependencies": {
+        "pixijs": "^7.1.4"
+    }
+}

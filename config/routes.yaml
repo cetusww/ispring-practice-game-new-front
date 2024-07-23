@@ -1,0 +1,93 @@
+index:
+    path: /
+    controller: App\Controller\ViewController::index
+
+error_not_found:
+    path: /error_not_found
+    controller: App\Controller\ViewController::showNotFoundException
+
+signup-form:
+    path: /user/signup
+    controller: App\Controller\ViewController::signUpUserForm
+
+signin-form:
+    path: /user/signin
+    controller: App\Controller\ViewController::signInUserForm
+
+signup:
+    path: /signup
+    controller: App\Controller\UserController::signUpUser
+
+signin:
+    path: /signin
+    controller: App\Controller\UserController::signInUser
+
+signout:
+    path: /user/signout
+    controller: App\Controller\UserController::signOutUser
+
+show_menu:
+    path: /menu
+    controller: App\Controller\ViewController::showMenu
+
+show_legend:
+    path: /legend
+    controller: App\Controller\ViewController::showLegend
+
+show_next_level:
+    path: /next-level
+    controller: App\Controller\ViewController::showNextLevel
+
+show_first_level:
+    path: /first-level
+    controller: App\Controller\ViewController::showFirstLevel
+
+show_second_level:
+    path: /second-level
+    controller: App\Controller\ViewController::showSecondLevel
+
+show_third_level:
+    path: /third-level
+    controller: App\Controller\ViewController::showThirdLevel
+
+show_win:
+    path: /win
+    controller: App\Controller\ViewController::showWin
+
+show_lose:
+    path: /lose
+    controller: App\Controller\ViewController::showLose
+
+show_win_multiplayer:
+    path: /win-multiplayer
+    controller: App\Controller\ViewController::showWinMultiplayer
+
+show_lose_multiplayer:
+    path: /lose-multiplayer
+    controller: App\Controller\ViewController::showLoseMultiplayer
+
+choose_level:
+    path: /choose-level
+    controller: App\Controller\ViewController::showLevels
+
+show_rating:
+    path: /rating
+    controller: App\Controller\ViewController::showRating
+
+show_lobby:
+    path: /lobby{id}
+    controller: App\Controller\ViewController::showLobby
+
+show_multiplayer:
+    path: /multiplayer
+    controller: App\Controller\ViewController::showMultiplayer
+
+api_score:
+    path: /api/score
+    controller: App\Controller\ApiController::saveScore
+    methods: POST
+
+api_multiplayer_score:
+    path: /api/multiplayer-score
+    controller: App\Controller\ApiController::saveMultiplayerScore
+    methods: POST

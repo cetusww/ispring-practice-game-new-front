@@ -1,0 +1,80 @@
+{
+  "frames": {
+    "hero_dead1.png": {
+      "frame": {"x":0, "y":0, "w":944, "h":780},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":944, "h":780},
+      "sourceSize": {"w":944, "h":780}
+    },
+    "hero_dead2.png": {
+      "frame": {"x":944, "y":0, "w":944, "h":780},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":944, "h":780},
+      "sourceSize": {"w":944, "h":780}
+    },
+    "hero_dead3.png": {
+      "frame": {"x":1888, "y":0, "w":944, "h":780},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":944, "h":780},
+      "sourceSize": {"w":944, "h":780}
+    },
+    "hero_dead4.png": {
+      "frame": {"x":2832, "y":0, "w":944, "h":780},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":944, "h":780},
+      "sourceSize": {"w":944, "h":780}
+    },
+    "hero_dead5.png": {
+      "frame": {"x":3776, "y":0, "w":944, "h":780},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":944, "h":780},
+      "sourceSize": {"w":944, "h":780}
+    },
+    "hero_dead6.png": {
+      "frame": {"x":4720, "y":0, "w":944, "h":780},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":944, "h":780},
+      "sourceSize": {"w":944, "h":780}
+    },
+    "hero_dead7.png": {
+      "frame": {"x":5664, "y":0, "w":944, "h":780},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":944, "h":780},
+      "sourceSize": {"w":944, "h":780}
+    },
+    "hero_dead8.png": {
+      "frame": {"x":6608, "y":0, "w":944, "h":780},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":944, "h":780},
+      "sourceSize": {"w":944, "h":780}
+    },
+    "hero_dead9.png": {
+      "frame": {"x":7552, "y":0, "w":944, "h":780},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":944, "h":780},
+      "sourceSize": {"w":944, "h":780}
+    },
+    "hero_dead10.png": {
+      "frame": {"x":8496, "y":0, "w":944, "h":780},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":944, "h":780},
+      "sourceSize": {"w":944, "h":780}
+    }
+  },
+  "meta": {
+    "image": "hero_dead_group.png",
+    "format": "RGBA8888",
+    "size": {"w":9440, "h":780},
+    "scale": "1"
+  }
+}

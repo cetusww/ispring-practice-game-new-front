@@ -1,0 +1,80 @@
+{
+  "frames": {
+    "hero_jump1.png": {
+      "frame": {"x":0, "y":0, "w":587, "h":707},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":587, "h":707},
+      "sourceSize": {"w":587, "h":707}
+    },
+    "hero_jump2.png": {
+      "frame": {"x":587, "y":0, "w":587, "h":707},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":587, "h":707},
+      "sourceSize": {"w":587, "h":707}
+    },
+    "hero_jump3.png": {
+      "frame": {"x":1174, "y":0, "w":587, "h":707},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":587, "h":707},
+      "sourceSize": {"w":587, "h":707}
+    },
+    "hero_jump4.png": {
+      "frame": {"x":1761, "y":0, "w":587, "h":707},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":587, "h":707},
+      "sourceSize": {"w":587, "h":707}
+    },
+    "hero_jump5.png": {
+      "frame": {"x":2348, "y":0, "w":587, "h":707},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":587, "h":707},
+      "sourceSize": {"w":587, "h":707}
+    },
+    "hero_jump6.png": {
+      "frame": {"x":2935, "y":0, "w":587, "h":707},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":587, "h":707},
+      "sourceSize": {"w":587, "h":707}
+    },
+    "hero_jump7.png": {
+      "frame": {"x":3522, "y":0, "w":587, "h":707},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":587, "h":707},
+      "sourceSize": {"w":587, "h":707}
+    },
+    "hero_jump8.png": {
+      "frame": {"x":4109, "y":0, "w":587, "h":707},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":587, "h":707},
+      "sourceSize": {"w":587, "h":707}
+    },
+    "hero_jump9.png": {
+      "frame": {"x":4696, "y":0, "w":587, "h":707},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":587, "h":707},
+      "sourceSize": {"w":587, "h":707}
+    },
+    "hero_jump10.png": {
+      "frame": {"x":5283, "y":0, "w":587, "h":707},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":587, "h":707},
+      "sourceSize": {"w":587, "h":707}
+    }
+  },
+  "meta": {
+    "image": "hero_jump_group.png",
+    "format": "RGBA8888",
+    "size": {"w":5870, "h":707},
+    "scale": "1"
+  }
+}

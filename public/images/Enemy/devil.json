@@ -1,0 +1,45 @@
+{
+  "frames": {
+    "devilIdle.png": {
+      "frame": {"x":56, "y":150, "w":32, "h":40},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":32, "h":40},
+      "sourceSize": {"w":32, "h":40}
+    },
+    "devilWalk1.png": {
+      "frame": {"x":8, "y":88, "w":32, "h":40},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":32, "h":40},
+      "sourceSize": {"w":32, "h":40}
+    },
+    "devilWalk3.png": {
+      "frame": {"x":56, "y":88, "w":32, "h":40},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":32, "h":40},
+      "sourceSize": {"w":32, "h":40}
+    },
+    "devilWalk2.png": {
+      "frame": {"x":104, "y":88, "w":32, "h":40},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":32, "h":40},
+      "sourceSize": {"w":32, "h":40}
+    },
+    "devilWalk4.png": {
+      "frame": {"x":56, "y":88, "w":32, "h":40},
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {"x":0, "y":0, "w":32, "h":40},
+      "sourceSize": {"w":32, "h":40}
+    }
+  },
+  "meta": {
+    "image": "devil.png",
+    "format": "RGBA8888",
+    "size": {"w":144, "h":256},
+    "scale": "1"
+  }
+}

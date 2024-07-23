@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    height: 100%;
+    background: url('../images/Background/win_background.png') no-repeat;
+    background-size: cover;
+}
+
+.main {
+    background-color: rgba(61, 61, 61, 0.6);
+    width: 700px;
+    height: 50%;
+    margin: 5% auto 0 auto;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+h1 {
+    font: 400 50px/100px "Russo One", sans-serif;
+    color: rgba(255, 255, 255, 1);
+    margin: 0 0 20px 0;
+}
+
+.options-list {
+    display: flex;
+    justify-content: space-around;
+    font: 400 30px/34px "Russo One", sans-serif;
+    color: rgba(255, 255, 255, 1);
+}
+
+.options-list__restart,
+.options-list__continue {
+    display: block;
+    text-align: center;
+}
+
+img {
+    border-radius: 0;
+    width: 70px;
+    height: 70px;
+}
+
+@media (max-height: 660px) {
+    img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .options-list__top {
+        font: 400 20px/24px "Russo One", sans-serif;
+        color: rgba(255, 255, 255, 1);
+    }
+
+    .options-list__bottom {
+        font: 400 20px/24px "Russo One", sans-serif;
+        color: rgba(255, 255, 255, 1);
+    }
+
+    .main {
+        height: 80%;
+    }
+}
